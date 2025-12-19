@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepAware | Exploración Segura</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">DeepAware</div>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#niveles">Niveles</a></li>
+            <li><a href="#riesgos">Riesgos</a></li>
+            <li><a href="#mitos">Mitos</a></li>
+        </ul>
+        <button class="btn-dark" onclick="openModal()">Explorar</button>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <div class="hero-text" data-aos="fade-right">
+            <span class="tag">Seguridad Digital</span>
+            <h1>Descubre la Verdad sobre la Deep Web</h1>
+            <p>No es solo un mito de películas. Aprende a diferenciar los niveles de la red y por qué tu seguridad es lo más importante.</p>
+            <a href="#niveles" class="btn-main" style="text-decoration: none; display: inline-block;">Saber más ➔</a>
+        </div>
+        <div class="hero-image" data-aos="zoom-in">
+            <div class="image-frame">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Ciberseguridad">
+            </div>
+        </div>
+    </header>
+
+    <section id="niveles" class="services">
+        <h2 data-aos="fade-up">Ahorra riesgos conociendo los niveles</h2>
+        <div class="grid-services">
+            <div class="card card-1" data-aos="flip-left">
+                <div class="icon-box">🌐</div>
+                <h3>Surface Web</h3>
+                <p>El internet que usas diario: Google, Facebook y noticias públicas.</p>
+            </div>
+            <div class="card card-2" data-aos="flip-left" data-aos-delay="100">
+                <div class="icon-box">📁</div>
+                <h3>Deep Web</h3>
+                <p>Bases de datos, correos y nubes privadas no indexadas.</p>
+            </div>
+            <div class="card card-3" data-aos="flip-left" data-aos-delay="200">
+                <div class="icon-box">🧅</div>
+                <h3>Dark Web</h3>
+                <p>Redes ocultas (TOR) donde el anonimato es la prioridad absoluta.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="riesgos" class="why-us">
+        <div class="why-layout">
+            <div class="why-img" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80" alt="Tecnología">
+            </div>
+            <div class="why-content" data-aos="fade-left">
+                <h2>¿Por qué evitar entrar?</h2>
+                <div class="stat"><span class="counter">90</span><p>Sitios maliciosos detectados.</p></div>
+                <div class="stat"><span class="counter">86</span><p>Riesgo de rastreo de IP.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mitos" class="projects">
+        <h2 data-aos="fade-up">Mitos vs Realidad</h2>
+        <div class="project-item" data-aos="fade-up">
+            <div class="project-info">
+                <span class="badge blue">Mito</span>
+                <h3>"Es ilegal entrar a la Deep Web"</h3>
+                <p><strong>Realidad:</strong> Navegar es legal; lo ilegal es el contenido que consumes o las transacciones que realices.</p>
+            </div>
+            <div class="project-info" style="background: #fff; border: 2px solid var(--dark); padding: 20px; border-radius: 20px;">
+                <span class="badge pink">Realidad</span>
+                <p>Es una herramienta de privacidad usada por periodistas y activistas en países con censura.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="footer">
+        <div class="footer-content">
+            <h2>¿Listo para proteger tu navegación?</h2>
+            <p>Suscríbete para recibir alertas de seguridad y consejos pro.</p>
+            <form class="subscribe-form" id="subForm">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn-dark">Suscribirse</button>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 DeepAware - Conciencia Digital</p>
+        </div>
+    </footer>
+
+    <div id="securityModal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(5px);">
+        <div class="modal-content" style="background: white; padding: 40px; border-radius: 30px; border: 4px solid #2b2d42; max-width: 500px; width: 90%; text-align: center; position: relative;">
+            <span onclick="closeModal()" style="position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer;">&times;</span>
+            <h2 style="margin-bottom: 20px;">🚀 Consejos de Exploración</h2>
+            <ul style="text-align: left; line-height: 1.8; margin-bottom: 20px;">
+                <li>🔒 Usa una VPN de alta calidad.</li>
+                <li>🚫 No descargues archivos desconocidos.</li>
+                <li>🙈 Tapa tu webcam físicamente.</li>
+                <li>🎭 Mantén tu identidad en total anonimato.</li>
+            </ul>
+            <button class="btn-main" onclick="closeModal()">¡Entendido!</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: false, mirror: true });
+
+        // FUNCIONES PARA EL MODAL
+        function openModal() {
+            document.getElementById('securityModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('securityModal').style.display = 'none';
+        }
+
+        // Cierra el modal si se hace clic fuera de la caja blanca
+        window.onclick = function(event) {
+            const modal = document.getElementById('securityModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // FUNCIONALIDAD FORMULARIO
+        document.getElementById('subForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("¡Gracias por suscribirte! Pronto recibirás nuestras alertas.");
+            this.reset();
+        });
+
+        // Animación de los contadores numéricos
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const target = +counter.innerText;
+            let count = 0;
+            const updateCount = () => {
+                const inc = target / 100;
+                if(count < target) {
+                    count += inc;
+                    counter.innerText = Math.ceil(count) + (target === 86 ? '%' : '+');
+                    setTimeout(updateCount, 20);
+                }
+            };
+            
+            window.addEventListener('scroll', function callback() {
+                const pos = counter.getBoundingClientRect().top;
+                if(pos < window.innerHeight) {
+                    updateCount();
+                    window.removeEventListener('scroll', callback);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

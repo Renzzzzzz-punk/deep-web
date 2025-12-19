@@ -1,0 +1,202 @@
+:root {
+    --bg-light: #f9f6ef; /* Color crema de tu imagen */
+    --blue: #a2d2ff;
+    --pink: #ffafcc;
+    --yellow: #ffcc00;
+    --dark: #2b2d42;
+}
+
+body {
+    font-family: 'Arial Rounded MT Bold', 'Helvetica', sans-serif;
+    background-color: var(--bg-light);
+    margin: 0;
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    align-items: center;
+}
+
+ul { display: flex; list-style: none; gap: 30px; }
+
+.btn-dark {
+    background: var(--dark);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    padding: 60px 10%;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text h1 { font-size: 3.8rem; line-height: 1; margin-bottom: 20px; }
+.tag { background: white; padding: 5px 15px; border-radius: 20px; border: 1px solid #ddd; }
+
+.image-frame img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 40px 150px 40px 40px;
+    border: 3px solid var(--dark);
+    box-shadow: 15px 15px 0px var(--pink);
+}
+
+/* Cards de Niveles */
+.services { padding: 80px 10%; text-align: center; }
+
+.grid-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+    perspective: 1000px;
+}
+
+.card {
+    padding: 40px;
+    border-radius: 25px;
+    border: 3px solid var(--dark);
+    box-shadow: 10px 10px 0px var(--dark);
+    transition: all 0.3s ease;
+}
+
+.card-1 { background: var(--blue); }
+.card-2 { background: var(--pink); }
+.card-3 { background: var(--yellow); }
+
+/* Sección Why Us (Estadísticas) */
+.why-us {
+    background: var(--yellow);
+    padding: 100px 10%;
+    margin: 50px 0;
+}
+
+.why-layout { display: flex; align-items: center; gap: 80px; }
+
+.why-img img {
+    width: 400px;
+    border-radius: 30px;
+    box-shadow: -15px 15px 0px white;
+}
+
+.stat span { font-size: 3.5rem; font-weight: bold; }
+
+/* Riesgos (Items de imagen) */
+.projects { padding: 80px 10%; }
+
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.project-item.reverse { flex-direction: row-reverse; }
+
+.project-item img {
+    width: 500px;
+    border-radius: 30px;
+    border: 3px solid var(--dark);
+    box-shadow: 15px 15px 0px var(--blue);
+}
+
+.badge {
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.badge.blue { background: var(--blue); }
+.badge.pink { background: var(--pink); }
+
+.btn-main {
+    background: var(--yellow);
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 3px solid var(--dark);
+    box-shadow: 5px 5px 0px var(--dark);
+    cursor: pointer;
+}
+html {
+    scroll-behavior: smooth; /* Esto activa el movimiento fluido */
+}
+
+/* Estilo para los enlaces del menú para que no se vean azules ni subrayados */
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff4d4d; /* Cambia a un color llamativo al pasar el mouse */
+}
+/* Navegación Fija */
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(249, 246, 239, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 2px solid var(--dark);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10%;
+    align-items: center;
+}
+
+nav ul { display: flex; list-style: none; gap: 30px; }
+nav ul li a { text-decoration: none; color: var(--dark); font-weight: bold; transition: 0.3s; }
+nav ul li a:hover { color: var(--pink); }
+
+/* Footer Estilo Imagen */
+.footer {
+    background: #a2d2ff;
+    padding: 80px 10% 40px;
+    text-align: center;
+    border-radius: 50px 50px 0 0;
+    border-top: 3px solid var(--dark);
+}
+
+.subscribe-form {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subscribe-form input {
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 3px solid var(--dark);
+    width: 300px;
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Suavizar scroll global */
+html {
+    scroll-behavior: smooth;
+}
+
